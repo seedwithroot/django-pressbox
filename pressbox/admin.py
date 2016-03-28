@@ -1,5 +1,5 @@
 from django.contrib import admin
-from pressbox.models import PressItem, PressImage, PressCategory
+from pressbox.models import PressItem, PressImage, PressCategory, PressImagePin
 from pressbox.forms import PressItemForm
 
 class PressImageInline(admin.StackedInline):
