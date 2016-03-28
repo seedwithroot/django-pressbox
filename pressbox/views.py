@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
-from django.shortcuts import render_to_response, get_object_or_404, get_list_or_404, render
+from django.shortcuts import get_object_or_404, get_list_or_404, render
 from django.template import RequestContext
 from django.views.generic.list import list_detail
 from pressbox.models import PressItem
