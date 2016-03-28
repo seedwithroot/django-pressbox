@@ -1,7 +1,5 @@
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.shortcuts import get_object_or_404, get_list_or_404, render
-from django.template import RequestContext
-from django.views.generic.list import list_detail
 from pressbox.models import PressItem
 
 def press_list(request, template_name='pressbox/object_list.html', extra_context={}):
