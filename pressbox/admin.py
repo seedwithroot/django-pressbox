@@ -8,15 +8,22 @@ class PressImageInline(admin.StackedInline):
     model = PressImage
 
 
+class PressImagePinInline(admin.StackedInline):
+    extra = 1
+    max_num = 8
+    model = PressImagePin
+
+
 class PressItemAdmin(admin.ModelAdmin):
-    model = PressItem    
+    model = PressItem
     form = PressItemForm
     prepopulated_fields = {'slug':("title",),}
-    
+
     search_fields = ('title',)
     list_display = ('title', 'published_on','is_active')
     inlines = [
-      PressImageInline
+      PressImageInline,
+      PressImagePinInline
     ]
 
 class PressCategoryAdmin(admin.ModelAdmin):
